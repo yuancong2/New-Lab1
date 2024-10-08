@@ -282,7 +282,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>0</string>
+         <string>00</string>
         </property>
        </widget>
       </item>
@@ -361,7 +361,7 @@
      <x>0</x>
      <y>0</y>
      <width>429</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
