@@ -282,7 +282,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>0</string>
+         <string>00</string>
         </property>
        </widget>
       </item>
