@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>429</width>
-    <height>268</height>
+    <width>880</width>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -219,6 +219,12 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">
@@ -360,8 +366,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>429</width>
-     <height>21</height>
+     <width>880</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
