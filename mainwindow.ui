@@ -155,7 +155,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>1/X</string>
+         <string>1/x</string>
         </property>
        </widget>
       </item>
@@ -327,7 +327,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>X^2</string>
+         <string>x^2</string>
         </property>
        </widget>
       </item>
@@ -367,7 +367,7 @@
      <x>0</x>
      <y>0</y>
      <width>501</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

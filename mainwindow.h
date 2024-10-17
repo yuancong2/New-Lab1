@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include<QStack>
 #include<QDebug>
+#include<math.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -32,6 +33,8 @@ private  slots:
 
     void btnBinaryOperatorClicked();
 
+    void btnUnaryOperatorClicked();
+
     void on_btnPeriod_clicked();
 
     void on_btnDel_clicked();
@@ -39,6 +42,8 @@ private  slots:
     void on_btnClearAll_clicked();
 
     void on_btnEqual_clicked();
+
+    void on_btnSign_clicked();
 
 private:
     Ui::MainWindow *ui;
