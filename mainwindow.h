@@ -43,7 +43,11 @@ private  slots:
 
     void on_btnEqual_clicked();
 
-    void on_btnSign_clicked();
+    // void on_btnSign_clicked();
+
+    void on_btnClear_clicked();
+
+
 
 private:
     Ui::MainWindow *ui;

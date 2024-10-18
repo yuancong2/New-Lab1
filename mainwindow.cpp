@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnInverse, SIGNAL(clicked()), this, SLOT(btnUnaryOperatorClicked()));
     connect(ui->btnSquare, SIGNAL(clicked()), this, SLOT(btnUnaryOperatorClicked()));
     connect(ui->btnSqrt, SIGNAL(clicked()), this, SLOT(btnUnaryOperatorClicked()));
+    connect(ui->btnSign, SIGNAL(clicked()), this, SLOT(btnUnaryOperatorClicked()));
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +42,7 @@ MainWindow::~MainWindow()
 QString MainWindow::calculation(bool *ok)
 {
     double result = operands.front().toDouble(); // 获取第一个操作数
+
     operands.pop_front();
 
     if (!operands.isEmpty() && !opcodes.isEmpty()) {
@@ -111,6 +113,7 @@ void MainWindow::on_btnClearAll_clicked()
     operands.clear();
     opcodes.clear();
     ui->display->clear();
+    ui->statusbar->showMessage("");
 }
 
 // 二元操作符点击
@@ -162,6 +165,8 @@ void MainWindow::btnUnaryOperatorClicked()
             result *= result;
         else if (op == "√")
             result = sqrt(result);
+        else if (op == "±")
+            result = -result;
 
         ui->display->setText(QString::number(result));  // 显示结果
         operand = QString::number(result);              // 将结果存入 operand，以便后续继续使用
@@ -192,13 +197,21 @@ void MainWindow::on_btnEqual_clicked()
 }
 
 
-// 符号切换
-void MainWindow::on_btnSign_clicked()
+// // 符号切换
+// void MainWindow::on_btnSign_clicked()
+// {
+//     if (!operand.isEmpty()) {
+//         double value = operand.toDouble();
+//         value = -value;
+//         operand = QString::number(value);
+//         ui->display->setText(operand);
+//     }
+// }
+
+void MainWindow::on_btnClear_clicked()
 {
-    if (!operand.isEmpty()) {
-        double value = operand.toDouble();
-        value = -value;
-        operand = QString::number(value);
-        ui->display->setText(operand);
-    }
+    operand.clear();
+    ui->display->setText(operand);
+
 }
+
