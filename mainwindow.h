@@ -5,6 +5,9 @@
 #include<QStack>
 #include<QDebug>
 #include<math.h>
+#include<QKeyEvent>
+#include<QMap>
+#include<QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,6 +27,10 @@ public:
     QString opcode;
     QStack<QString> operands;
     QStack<QString> opcodes;
+    QMap<int, QPushButton *> digitBTNs;
+    QMap<int, QPushButton *> BinaryOperatorBTNs;
+    QMap<int, QPushButton *> UnaryOperatorBTNs;
+
 
     QString calculation(bool *ok = NULL);
 
@@ -47,7 +54,7 @@ private  slots:
 
     void on_btnClear_clicked();
 
-
+    virtual void keyPressEvent(QKeyEvent * event);
 
 private:
     Ui::MainWindow *ui;
